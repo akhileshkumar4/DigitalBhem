@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hotel Booking Registration Form</title>
+    
+</head>
+<body>
+    <h1>Hotel Booking Registration Form</h1>
+    <form id="booking-form">
+        <label for="customer-name">Customer Name:</label>
+        <input type="text" id="customer-name" required><br>
+
+        <label for="check-in-date">Check-in Date:</label>
+        <input type="date" id="check-in-date" required><br>
+
+        <label for="total-days">Total No of Days:</label>
+        <input type="number" id="total-days" min="1" required><br>
+
+        <label for="total-persons">Total No of Persons:</label>
+        <input type="number" id="total-persons" min="1" required><br>
+
+        <label for="room-type">Room Type:</label>
+        <select id="room-type">
+            <option value="Delux">Delux Room</option>
+            <option value="Suite">Suite Room</option>
+        </select><br>
+
+        <label for="advance-amount">Advance Amount:</label>
+        <input type="number" id="advance-amount" min="0" required><br>
+
+        <label for="amenities">Amenities:</label>
+        <select id="amenities" multiple>
+            <option value="AC">AC</option>
+            <option value="Locker">Locker</option>
+        </select><br>
+
+        <label for="extra-persons">Per Day Cost for Extra Person:</label>
+        <input type="number" id="extra-person-cost" min="0" value="1000" disabled><br>
+
+        <label for="total-cost">Total Cost:</label>
+        <input type="text" id="total-cost" readonly><br>
+
+        <label for="balance">Balance:</label>
+        <input type="text" id="balance" readonly><br>
+
+        <button type="button" onclick="calculateTotalCost()">Calculate</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
